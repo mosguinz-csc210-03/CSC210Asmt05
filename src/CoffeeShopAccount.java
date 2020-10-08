@@ -8,7 +8,14 @@
  * Semester: Fall 2020
  */
 
+import java.util.Scanner;
+
 public class CoffeeShopAccount {
+
+    private static final Scanner scan = new Scanner(System.in);
+    private final double balance = 0;
+    private String pin;
+
     public static void main(String[] args) {
 
     }
