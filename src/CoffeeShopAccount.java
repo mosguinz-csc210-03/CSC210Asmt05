@@ -42,4 +42,25 @@ public class CoffeeShopAccount {
         } while (action < 1 || action > 5);
         return action;
     }
+
+    /**
+     * Prompt the user to enter a PIN. Performs pattern validation to make sure
+     * that it is of an expected format (four digit number).
+     * <p>
+     * Note that it does not check if the pin is correct.
+     *
+     * @return the given PIN in a valid format.
+     */
+    private static String promptPin() {
+        String input;
+        while (true) {
+            System.out.println("Enter PIN: ");
+            input = scan.nextLine();
+            if (!input.matches("^\\d{4}$")) {
+                System.out.println("Invalid PIN format. Please enter a four digit PIN.");
+                continue;
+            }
+            return input;
+        }
+    }
 }
