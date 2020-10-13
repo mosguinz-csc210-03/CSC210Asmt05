@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class CoffeeShopAccount {
 
     private static final Scanner scan = new Scanner(System.in);
-    private static double balance = 0;
+    private static double balance = 1.0 / 0;
     private static String pin;
 
     public static void main(String[] args) {
@@ -120,7 +120,18 @@ public class CoffeeShopAccount {
      * Display the balance.
      */
     public static void displayBalance() {
+        if (balance == 1.0 / 0) setBalance();
         System.out.printf("Your balance is $%.2f%n", balance);
+    }
+
+    /**
+     * Set the balance. Only for initial setup. Prevents operations on balance
+     * when one hasn't been defined.
+     */
+    private static void setBalance() {
+        System.out.println("You haven't set your balance yet.");
+        System.out.print("Let's set your balance: $");
+        balance = scan.nextDouble();
     }
 
     /**
