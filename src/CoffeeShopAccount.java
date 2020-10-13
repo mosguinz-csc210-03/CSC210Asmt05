@@ -107,4 +107,18 @@ public class CoffeeShopAccount {
         System.out.printf("You are spending: $%.2f%n", delta);
         System.out.printf("Your new balance is: $%.2f%n", balance);
     }
+
+    /**
+     * Add to the balance.
+     *
+     * @param delta The amount to deposit.
+     */
+    public static void addBalance(double delta) {
+        System.out.print("Enter your deposit amount: $");
+        displayBalance();
+        balance += delta;
+        System.out.printf("You are depositing: $%.2f%n", delta);
+        System.out.printf("Your new balance is: $%.2f%n", balance);
+    }
+
 }
