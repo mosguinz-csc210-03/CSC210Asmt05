@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class CoffeeShopAccount {
 
     private static final Scanner scan = new Scanner(System.in);
-    private static double balance = 1.0 / 0;
+    private static double balance = 1.0 / 0;  // Infinity as default
     private static String pin;
 
     public static void main(String[] args) {
@@ -48,7 +48,7 @@ public class CoffeeShopAccount {
             System.out.println("\nPlease enter your PIN before proceeding.");
             if (!promptPin().equals(pin)) {
                 System.out.println("Incorrect PIN.");
-                System.out.println("If you have forgotten your PIN. Please restart the program to reset it");
+                System.out.println("If you have forgotten your PIN. Please restart the program to reset it.");
                 System.out.println("The program will now exit.");
                 return;
             }
@@ -117,7 +117,11 @@ public class CoffeeShopAccount {
     }
 
     /**
-     * Display the balance.
+     * Display the balance. Runs after every balance-related operations.
+     * <p>
+     * This method will perform checks to see if the initial balance has been
+     * set by the user. If the balance hasn't been set (default = Infinity),
+     * then it will prompt the user to set one before continuing.
      */
     public static void displayBalance() {
         if (balance == 1.0 / 0) setBalance();
