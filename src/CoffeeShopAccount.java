@@ -110,6 +110,9 @@ public class CoffeeShopAccount {
         }
     }
 
+    /**
+     * Set the PIN.
+     */
     public static void setPin() {
         System.out.println("Let's set your new PIN number.");
         pin = promptPin();
