@@ -74,8 +74,8 @@ public class CoffeeShopAccount {
     /**
      * Display the balance.
      */
-    public void displayBalance() {
-        System.out.printf("Your balance is $%.2f%n", this.balance);
+    public static void displayBalance() {
+        System.out.printf("Your balance is $%.2f%n", balance);
     }
 
     /**
