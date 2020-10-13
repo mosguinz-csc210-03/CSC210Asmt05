@@ -58,6 +58,7 @@ public class CoffeeShopAccount {
                 System.out.println("\nInvalid selection. Please enter a valid option.");
                 continue;
             }
+            System.out.println();
             return action;
         }
     }
