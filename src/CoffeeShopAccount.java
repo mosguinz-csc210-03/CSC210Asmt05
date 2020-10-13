@@ -35,6 +35,12 @@ public class CoffeeShopAccount {
                     System.out.println("\nExiting... Goodbye!");
                     return;
             }
+            if (!promptPin().equals(pin)) {
+                System.out.println("Incorrect PIN.");
+                System.out.println("If you have forgotten your PIN. Please restart the program to reset it");
+                System.out.println("The program will now exit.");
+                return;
+            }
         }
     }
 
