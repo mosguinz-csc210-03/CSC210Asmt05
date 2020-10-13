@@ -64,4 +64,11 @@ public class CoffeeShopAccount {
             return input;
         }
     }
+
+    /**
+     * Display the balance.
+     */
+    private void displayBalance() {
+        System.out.printf("Your balance is $%.2f%n", this.balance);
+    }
 }
