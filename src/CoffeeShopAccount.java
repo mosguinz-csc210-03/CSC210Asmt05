@@ -79,11 +79,15 @@ public class CoffeeShopAccount {
     }
 
     /**
-     * Update the balance.
+     * Spend the balance.
      *
-     * @param delta The amount to update the balance by.
+     * @param delta The amount to spend.
      */
-    public static void updateBalance(double delta) {
-        balance += delta;
+    public static void spendBalance(double delta) {
+        System.out.print("Enter your spending amount: $");
+        displayBalance();
+        balance -= delta;
+        System.out.printf("You are spending: $%.2f%n", delta);
+        System.out.printf("Your new balance is: $%.2f%n", balance);
     }
 }
