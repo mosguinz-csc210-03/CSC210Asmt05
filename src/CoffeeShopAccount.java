@@ -29,7 +29,7 @@ public class CoffeeShopAccount {
                     spendBalance();
                     break;
                 case 4:
-                    // setPin();
+                    setPin();
                     break;
                 case 5:
                     System.out.println("\nExiting... Goodbye!");
@@ -74,8 +74,8 @@ public class CoffeeShopAccount {
     private static String promptPin() {
         String input;
         while (true) {
-            System.out.println("Enter PIN: ");
-            input = scan.nextLine();
+            System.out.print("Enter PIN: ");
+            input = scan.next();
             if (!input.matches("^\\d{4}$")) {
                 System.out.println("Invalid PIN format. Please enter a four digit PIN.");
                 continue;
@@ -85,8 +85,9 @@ public class CoffeeShopAccount {
     }
 
     public static void setPin() {
-        System.out.println("Let's set your new PIN number:");
+        System.out.println("Let's set your new PIN number.");
         pin = promptPin();
+        System.out.println("Your PIN number has been updated.");
     }
 
     /**
