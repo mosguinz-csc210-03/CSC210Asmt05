@@ -17,6 +17,15 @@ public class CoffeeShopAccount {
     private static String pin;
 
     public static void main(String[] args) {
+        loop();
+    }
+
+    /**
+     * Run the program's execution loop.
+     */
+    public static void loop() {
+        initialSetup();
+
         while (true) {
             switch (promptAction()) {
                 case 1:
@@ -35,6 +44,8 @@ public class CoffeeShopAccount {
                     System.out.println("\nExiting... Goodbye!");
                     return;
             }
+
+            System.out.println("\nPlease enter your PIN before proceeding.");
             if (!promptPin().equals(pin)) {
                 System.out.println("Incorrect PIN.");
                 System.out.println("If you have forgotten your PIN. Please restart the program to reset it");
@@ -42,6 +53,15 @@ public class CoffeeShopAccount {
                 return;
             }
         }
+    }
+
+    /**
+     * Run the initial setup prompts.
+     */
+    private static void initialSetup() {
+        System.out.println("Welcome! Let's set up a new four-digit PIN.");
+        pin = promptPin();
+        System.out.println("Thank you! Your PIN Has been recorded");
     }
 
     /**
