@@ -113,7 +113,7 @@ public class CoffeeShopAccount {
     /**
      * Set the PIN.
      */
-    public static void setPin() {
+    private static void setPin() {
         System.out.println("Let's set your new PIN number.");
         pin = promptPin();
         System.out.println("Your PIN number has been updated.");
@@ -126,7 +126,7 @@ public class CoffeeShopAccount {
      * set by the user. If the balance hasn't been set (default = Infinity),
      * then it will prompt the user to set one before continuing.
      */
-    public static void displayBalance() {
+    private static void displayBalance() {
         if (balance == 1.0 / 0) setBalance();
         System.out.printf("Your balance is $%.2f%n", balance);
     }
@@ -144,7 +144,7 @@ public class CoffeeShopAccount {
     /**
      * Spend the balance.
      */
-    public static void spendBalance() {
+    private static void spendBalance() {
         System.out.print("Enter your spending amount: $");
         double delta = scan.nextDouble();
         displayBalance();
@@ -156,7 +156,7 @@ public class CoffeeShopAccount {
     /**
      * Add to the balance.
      */
-    public static void addBalance() {
+    private static void addBalance() {
         System.out.print("Enter your deposit amount: $");
         double delta = scan.nextDouble();
         displayBalance();
