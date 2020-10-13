@@ -13,11 +13,12 @@ import java.util.Scanner;
 public class CoffeeShopAccount {
 
     private static final Scanner scan = new Scanner(System.in);
-    private double balance = 0;
-    private String pin;
+    private static double balance = 0;
+    private static String pin;
 
     public static void main(String[] args) {
         int action = promptAction();
+        setPin();
     }
 
     /**
@@ -63,6 +64,11 @@ public class CoffeeShopAccount {
             }
             return input;
         }
+    }
+
+    public static void setPin() {
+        System.out.println("Let's set your new PIN number:");
+        pin = promptPin();
     }
 
     /**
