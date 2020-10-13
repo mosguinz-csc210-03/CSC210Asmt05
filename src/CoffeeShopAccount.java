@@ -23,7 +23,7 @@ public class CoffeeShopAccount {
                     displayBalance();
                     break;
                 case 2:
-                    // addBalance();
+                    addBalance();
                     break;
                 case 3:
                     spendBalance();
@@ -97,11 +97,10 @@ public class CoffeeShopAccount {
 
     /**
      * Spend the balance.
-     *
-     * @param delta The amount to spend.
      */
-    public static void spendBalance(double delta) {
+    public static void spendBalance() {
         System.out.print("Enter your spending amount: $");
+        double delta = scan.nextDouble();
         displayBalance();
         balance -= delta;
         System.out.printf("You are spending: $%.2f%n", delta);
@@ -110,11 +109,10 @@ public class CoffeeShopAccount {
 
     /**
      * Add to the balance.
-     *
-     * @param delta The amount to deposit.
      */
-    public static void addBalance(double delta) {
+    public static void addBalance() {
         System.out.print("Enter your deposit amount: $");
+        double delta = scan.nextDouble();
         displayBalance();
         balance += delta;
         System.out.printf("You are depositing: $%.2f%n", delta);
