@@ -83,7 +83,7 @@ public class CoffeeShopAccount {
      *
      * @param delta The amount to update the balance by.
      */
-    public void updateBalance(double delta) {
-        this.balance += delta;
+    public static void updateBalance(double delta) {
+        balance += delta;
     }
 }
