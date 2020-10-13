@@ -145,9 +145,17 @@ public class CoffeeShopAccount {
      * Spend the balance.
      */
     private static void spendBalance() {
-        System.out.print("Enter your spending amount: $");
-        double delta = scan.nextDouble();
-        displayBalance();
+        double delta;
+        while (true) {
+            displayBalance();
+            System.out.print("Enter your spending amount: $");
+            delta = scan.nextDouble();
+            if (delta > balance) {
+                System.out.println("You have insufficient funds.");
+                continue;
+            }
+            break;
+        }
         balance -= delta;
         System.out.printf("You are spending: $%.2f%n", delta);
         System.out.printf("Your new balance is: $%.2f%n", balance);
