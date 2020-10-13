@@ -17,8 +17,25 @@ public class CoffeeShopAccount {
     private static String pin;
 
     public static void main(String[] args) {
-        int action = promptAction();
-        setPin();
+        while (true) {
+            switch (promptAction()) {
+                case 1:
+                    displayBalance();
+                    break;
+                case 2:
+                    // addBalance();
+                    break;
+                case 3:
+                    spendBalance();
+                    break;
+                case 4:
+                    // setPin();
+                    break;
+                case 5:
+                    System.out.println("\nExiting... Goodbye!");
+                    return;
+            }
+        }
     }
 
     /**
