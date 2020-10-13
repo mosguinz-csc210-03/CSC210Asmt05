@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class CoffeeShopAccount {
 
     private static final Scanner scan = new Scanner(System.in);
-    private final double balance = 0;
+    private double balance = 0;
     private String pin;
 
     public static void main(String[] args) {
@@ -68,7 +68,16 @@ public class CoffeeShopAccount {
     /**
      * Display the balance.
      */
-    private void displayBalance() {
+    public void displayBalance() {
         System.out.printf("Your balance is $%.2f%n", this.balance);
+    }
+
+    /**
+     * Update the balance.
+     *
+     * @param delta The amount to update the balance by.
+     */
+    public void updateBalance(double delta) {
+        this.balance += delta;
     }
 }
