@@ -137,7 +137,7 @@ public class CoffeeShopAccount {
      */
     private static void setBalance() {
         System.out.println("You haven't set your balance yet.");
-        System.out.print("Let's set your balance: $");
+        System.out.print("Let's set your starting balance: $");
         balance = scan.nextDouble();
     }
 
