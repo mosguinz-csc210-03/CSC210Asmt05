@@ -27,10 +27,7 @@ public class CoffeeShopAccount {
      */
     private static int promptAction() {
         int action;
-        boolean prompted = false;
-        do {
-            if (prompted) System.out.println("Please enter a valid number");
-            prompted = true;
+        while (true) {
             System.out.println("\nChoose a number from the following menu:");
             System.out.println("1. Check balance");
             System.out.println("2. Deposit money");
@@ -39,8 +36,12 @@ public class CoffeeShopAccount {
             System.out.println("5. Exit");
             System.out.print(">>> ");
             action = scan.nextInt();
-        } while (action < 1 || action > 5);
-        return action;
+            if (action < 1 || action > 5) {
+                System.out.println("\nInvalid selection. Please enter a valid option.");
+                continue;
+            }
+            return action;
+        }
     }
 
     /**
